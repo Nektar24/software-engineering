@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-14T10:58:50.097Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="8SU9-fhjIPQ4gjtoCnxS" version="24.2.3" type="device">
+<mxfile host="app.diagrams.net" modified="2024-04-14T11:15:10.303Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="Po2GR78dxif5JkgpzrPr" version="24.2.3" type="device">
   <diagram name="Page-1" id="uMqA1R6x-6Gs1QEI-oIA">
     <mxGraphModel dx="2150" dy="1398" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -94,7 +94,7 @@
         <mxCell id="FWMYH-VB2yFF3loCDDfO-94" value="Επεξεργασία Προφίλ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-98" y="396" width="128" height="61" as="geometry" />
         </mxCell>
-        <mxCell id="FWMYH-VB2yFF3loCDDfO-95" value="Αναζήτηση Ιστορικών Σημείων" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="FWMYH-VB2yFF3loCDDfO-95" value="Επίσκεψη Ιστορικού Σημείου" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="114" y="297" width="128" height="61" as="geometry" />
         </mxCell>
         <mxCell id="FWMYH-VB2yFF3loCDDfO-96" value="Αξιολόγηση Σημείου" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
