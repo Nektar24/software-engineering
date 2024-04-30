@@ -9,7 +9,10 @@ from kivy.clock import mainthread
 from kivy.utils import platform
 from kivy.garden.mapview import MapView, MapMarker # type: ignore
 
-from plyer import gps
+gps = None
+
+if platform == "android":
+    from plyer import gps
 
 if platform == "win":
     from geopy.geocoders import Nominatim
@@ -61,13 +64,14 @@ class GpsTest(App):
         request_permissions([Permission.ACCESS_COARSE_LOCATION, Permission.ACCESS_FINE_LOCATION])
 
     def build(self):
-        try:
-            gps.configure(on_location=self.on_location,
-                          on_status=self.on_status)
-        except NotImplementedError:
-            import traceback
-            traceback.print_exc()
-            self.gps_status = 'GPS is not implemented for your platform'
+        if platform == "android":
+            try:
+                gps.configure(on_location=self.on_location,
+                            on_status=self.on_status)
+            except NotImplementedError:
+                import traceback
+                traceback.print_exc()
+                self.gps_status = 'GPS is not implemented for your platform'
 
         if platform == "android":
             print("gps.py: Android detected. Requesting permissions")
@@ -77,6 +81,7 @@ class GpsTest(App):
             self.gps_status = 'Για λόγους παρουσίασης θετουμε τις συντεταγμένες στο κέντρο της Πάτρας'
             self.geolocator = Nominatim(user_agent="up1072594@upnet.gr")
             location = self.geolocator.geocode("Patra, Greece")
+            self.gps_location = 'lat=0\nlon=0'
             self.lat = location.latitude
             self.lon = location.longitude
 
@@ -88,7 +93,6 @@ class GpsTest(App):
         elif platform == "win":
             location = self.geolocator.geocode("Patra, Greece")
             self.gps_location = 'lat={}\nlon={}'.format(location.latitude, location.longitude)
-            self.gps_status = ''
             self.lat = location.latitude
             self.lon = location.longitude
         self.root.ids.mapview.center_on(self.lat, self.lon)
