@@ -1,13 +1,13 @@
+#Nektar
+
 # Βιβλιοθήκες , δεν μας νοιάζουν για τώρα
-
-
 
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 from kivy.clock import mainthread
 from kivy.utils import platform
-from kivy.garden.mapview import MapView, MapMarker
+from kivy.garden.mapview import MapView, MapMarker # type: ignore
 
 from plyer import gps
 
@@ -56,7 +56,7 @@ class GpsTest(App):
     gps_status = StringProperty('Click Start to get GPS location updates')
 
     def request_android_permissions(self):
-        from android.permissions import request_permissions, Permission
+        from android.permissions import request_permissions, Permission # type: ignore
 
         request_permissions([Permission.ACCESS_COARSE_LOCATION, Permission.ACCESS_FINE_LOCATION])
 
