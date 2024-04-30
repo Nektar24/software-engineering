@@ -5,6 +5,9 @@ from kivy.properties import StringProperty
 from kivy.clock import mainthread
 from kivy.utils import platform
 
+if platform == "win":
+    from geopy.geocoders import Nominatim
+
 kv = '''
 BoxLayout:
     orientation: 'vertical'
@@ -23,8 +26,7 @@ BoxLayout:
         ToggleButton:
             text: 'Start' if self.state == 'normal' else 'Stop'
             on_state:
-                app.start(1000, 0) if self.state == 'down' else \
-                app.stop()
+                app.start(1000, 0) if self.state == 'down' else app.stop()
 '''
 
 
@@ -49,15 +51,26 @@ class GpsTest(App):
 
         if platform == "android":
             print("gps.py: Android detected. Requesting permissions")
-            self.request_android_permissions()                
+            self.request_android_permissions()
+
+        elif platform == "win":
+            self.gps_status = 'Για λόγους παρουσίασης θετουμε τις συντεταγμένες στο κέντρο της Πάτρας'
+            self.geolocator = Nominatim(user_agent="up1072594@upnet.gr")
+            location = self.geolocator.geocode("Patra, Greece")
+            self.gps_status = self.gps_status + ", με συντεταγμένες: " + str(location.latitude) + ", " + str(location.longitude)
 
         return Builder.load_string(kv)
 
     def start(self, minTime, minDistance):
-        gps.start(minTime, minDistance)
+        if platform == "android":
+            gps.start(minTime, minDistance)
+        elif platform == "win":
+            location = self.geolocator.geocode("Patra, Greece")
+            self.gps_location = 'lat={}\nlon={}'.format(location.latitude, location.longitude)
 
     def stop(self):
-        gps.stop()
+        if platform == "android":
+            gps.stop()
 
     @mainthread
     def on_location(self, **kwargs):
@@ -69,11 +82,13 @@ class GpsTest(App):
         self.gps_status = 'type={}\n{}'.format(stype, status)
 
     def on_pause(self):
-        gps.stop()
+        if platform == "android":
+            gps.stop()
         return True
 
     def on_resume(self):
-        gps.start(1000, 0)
+        if platform == "android":
+            gps.start(1000, 0)
         pass
 
 
