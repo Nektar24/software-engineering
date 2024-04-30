@@ -1,16 +1,32 @@
-from kivy.lang import Builder
-from plyer import gps
+# Βιβλιοθήκες , δεν μας νοιάζουν για τώρα
+
+
+
 from kivy.app import App
+from kivy.lang import Builder
 from kivy.properties import StringProperty
 from kivy.clock import mainthread
 from kivy.utils import platform
+from kivy.garden.mapview import MapView, MapMarker
+
+from plyer import gps
 
 if platform == "win":
     from geopy.geocoders import Nominatim
 
+
+# Αυτο εδώ έχει σημασία , εδώ γράφεις τι εμφανίζεται στην εφαρμογή
+
 kv = '''
 BoxLayout:
     orientation: 'vertical'
+
+    MapView:
+        id: mapview
+        lat: app.lat
+        lon: app.lon
+        zoom: 15
+        size_hint: 1, 7
 
     Label:
         text: app.gps_location
@@ -29,10 +45,14 @@ BoxLayout:
                 app.start(1000, 0) if self.state == 'down' else app.stop()
 '''
 
+# παράδειγμα από
+# https://github.com/kivy/plyer/blob/master/examples/gps/main.py
 
 class GpsTest(App):
 
     gps_location = StringProperty()
+    lat = 0
+    lon = 0
     gps_status = StringProperty('Click Start to get GPS location updates')
 
     def request_android_permissions(self):
@@ -57,7 +77,8 @@ class GpsTest(App):
             self.gps_status = 'Για λόγους παρουσίασης θετουμε τις συντεταγμένες στο κέντρο της Πάτρας'
             self.geolocator = Nominatim(user_agent="up1072594@upnet.gr")
             location = self.geolocator.geocode("Patra, Greece")
-            self.gps_status = self.gps_status + ", με συντεταγμένες: " + str(location.latitude) + ", " + str(location.longitude)
+            self.lat = location.latitude
+            self.lon = location.longitude
 
         return Builder.load_string(kv)
 
@@ -68,6 +89,9 @@ class GpsTest(App):
             location = self.geolocator.geocode("Patra, Greece")
             self.gps_location = 'lat={}\nlon={}'.format(location.latitude, location.longitude)
             self.gps_status = ''
+            self.lat = location.latitude
+            self.lon = location.longitude
+        self.root.ids.mapview.center_on(self.lat, self.lon)
 
     def stop(self):
         if platform == "android":
