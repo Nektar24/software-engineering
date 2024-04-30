@@ -67,6 +67,7 @@ class GpsTest(App):
         elif platform == "win":
             location = self.geolocator.geocode("Patra, Greece")
             self.gps_location = 'lat={}\nlon={}'.format(location.latitude, location.longitude)
+            self.gps_status = ''
 
     def stop(self):
         if platform == "android":
