@@ -1,24 +1,11 @@
-#Nektar
-
-# Βιβλιοθήκες , δεν μας νοιάζουν για τώρα
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 from kivy.clock import mainthread
 from kivy.utils import platform
-from kivy.garden.mapview import MapView, MapMarker # type: ignore
+from kivy.garden.mapview import MapView # type: ignore
 
-gps = None
-
-if platform == "android":
-    from plyer import gps
-
-if platform == "win":
-    from geopy.geocoders import Nominatim
-
-
-# Αυτο εδώ έχει σημασία , εδώ γράφεις τι εμφανίζεται στην εφαρμογή
+import location
 
 kv = '''
 BoxLayout:
@@ -26,8 +13,8 @@ BoxLayout:
 
     MapView:
         id: mapview
-        lat: app.lat
-        lon: app.lon
+        lat: app.location_manager.lat
+        lon: app.location_manager.lon
         zoom: 15
         size_hint: 1, 7
 
@@ -45,81 +32,45 @@ BoxLayout:
         ToggleButton:
             text: 'Start' if self.state == 'normal' else 'Stop'
             on_state:
-                app.start(1000, 0) if self.state == 'down' else app.stop()
+                app.start() if self.state == 'down' else app.stop()
 '''
 
-# παράδειγμα από
-# https://github.com/kivy/plyer/blob/master/examples/gps/main.py
 
-class GpsTest(App):
+class MainPage(App):
 
     gps_location = StringProperty()
-    lat = 0
-    lon = 0
     gps_status = StringProperty('Click Start to get GPS location updates')
 
-    def request_android_permissions(self):
-        from android.permissions import request_permissions, Permission # type: ignore
-
-        request_permissions([Permission.ACCESS_COARSE_LOCATION, Permission.ACCESS_FINE_LOCATION])
+    def __init__(self, **kwargs):
+        super(MainPage, self).__init__(**kwargs)
+        self.location_manager = location.location()
 
     def build(self):
-        if platform == "android":
-            try:
-                gps.configure(on_location=self.on_location,
-                            on_status=self.on_status)
-            except NotImplementedError:
-                import traceback
-                traceback.print_exc()
-                self.gps_status = 'GPS is not implemented for your platform'
-
-        if platform == "android":
-            print("gps.py: Android detected. Requesting permissions")
-            self.request_android_permissions()
-
-        elif platform == "win":
-            self.gps_status = 'Για λόγους παρουσίασης θετουμε τις συντεταγμένες στο κέντρο της Πάτρας'
-            self.geolocator = Nominatim(user_agent="up1072594@upnet.gr")
-            location = self.geolocator.geocode("Patra, Greece")
-            self.gps_location = 'lat=0\nlon=0'
-            self.lat = location.latitude
-            self.lon = location.longitude
-
         return Builder.load_string(kv)
 
-    def start(self, minTime, minDistance):
-        if platform == "android":
-            gps.start(minTime, minDistance)
-        elif platform == "win":
-            location = self.geolocator.geocode("Patra, Greece")
-            self.gps_location = 'lat={}\nlon={}'.format(location.latitude, location.longitude)
-            self.lat = location.latitude
-            self.lon = location.longitude
-        self.root.ids.mapview.center_on(self.lat, self.lon)
-
+    def start(self):
+        self.location_manager.start_gps(1000, 0)
+        self.root.ids.mapview.center_on(self.location_manager.lat,self.location_manager.lon)
+    
     def stop(self):
-        if platform == "android":
-            gps.stop()
+        self.location_manager.stop_gps()
 
     @mainthread
-    def on_location(self, **kwargs):
-        self.gps_location = '\n'.join([
-            '{}={}'.format(k, v) for k, v in kwargs.items()])
+    def update_location(self, lat, lon):
+        self.root.ids.mapview.center_on(lat, lon)
+        self.gps_location = f'lat={lat}\nlon={lon}'
 
     @mainthread
-    def on_status(self, stype, status):
-        self.gps_status = 'type={}\n{}'.format(stype, status)
+    def update_status(self, status):
+        self.gps_status = status
 
     def on_pause(self):
-        if platform == "android":
-            gps.stop()
+        self.location_manager.stop_gps()
         return True
 
     def on_resume(self):
-        if platform == "android":
-            gps.start(1000, 0)
-        pass
+        self.location_manager.start_gps(1000, 0)
 
 
 if __name__ == '__main__':
-    GpsTest().run()
+    MainPage().run()
