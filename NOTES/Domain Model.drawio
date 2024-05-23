@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-23T11:30:09.650Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="wBpx84ZmVynlIDxnOG45" version="24.4.4" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-23T11:48:07.454Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="ppKCkIzokQLRT0c1BZJf" version="24.4.4" type="device">
   <diagram name="Page-1" id="uMqA1R6x-6Gs1QEI-oIA">
     <mxGraphModel dx="2913" dy="1149" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -229,23 +229,29 @@
         <mxCell id="-SmuW4suXFITCw-7g7z6-53" value="-description" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
           <mxGeometry y="56" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-SmuW4suXFITCw-7g7z6-48" value="-tour_nodes" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+        <mxCell id="t6O-NcNRQrhpdnjJr-c6-11" value="-language" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="-SmuW4suXFITCw-7g7z6-47">
           <mxGeometry y="82" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-SmuW4suXFITCw-7g7z6-54" value="-duration" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+        <mxCell id="-SmuW4suXFITCw-7g7z6-48" value="-tour_nodes" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
           <mxGeometry y="108" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-SmuW4suXFITCw-7g7z6-50" value="-seats" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+        <mxCell id="-SmuW4suXFITCw-7g7z6-54" value="-duration" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
           <mxGeometry y="134" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-SmuW4suXFITCw-7g7z6-51" value="-available_seats" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+        <mxCell id="t6O-NcNRQrhpdnjJr-c6-12" value="-dates" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="-SmuW4suXFITCw-7g7z6-47">
           <mxGeometry y="160" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-SmuW4suXFITCw-7g7z6-49" value="-tour_guide" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+        <mxCell id="-SmuW4suXFITCw-7g7z6-50" value="-seats" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
           <mxGeometry y="186" width="160" height="26" as="geometry" />
         </mxCell>
+        <mxCell id="-SmuW4suXFITCw-7g7z6-51" value="-available_seats" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+          <mxGeometry y="212" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-SmuW4suXFITCw-7g7z6-49" value="-tour_guide" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
+          <mxGeometry y="238" width="160" height="26" as="geometry" />
+        </mxCell>
         <mxCell id="-SmuW4suXFITCw-7g7z6-55" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="-SmuW4suXFITCw-7g7z6-47" vertex="1">
-          <mxGeometry y="212" width="160" height="8" as="geometry" />
+          <mxGeometry y="264" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="t6O-NcNRQrhpdnjJr-c6-1" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;endArrow=none;endFill=0;" edge="1" parent="1" source="-SmuW4suXFITCw-7g7z6-56" target="-SmuW4suXFITCw-7g7z6-47">
           <mxGeometry relative="1" as="geometry" />
