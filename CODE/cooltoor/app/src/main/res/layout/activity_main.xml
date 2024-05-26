@@ -9,65 +9,87 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="164dp"
-        android:layout_height="50dp"
-        android:background="#F3EEEE"
-        android:text="Contribution Historic walk"
+        android:layout_width="225dp"
+        android:layout_height="51dp"
+        android:background="#FAF9F9"
+        android:text="Contribution History walk"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="165dp"
-        android:layout_height="60dp"
-        android:background="#F6F1F1"
-        android:text="Contribution Historic Point"
+        android:layout_width="228dp"
+        android:layout_height="55dp"
+        android:background="#FAF8F8"
+        android:text="Contribution History Point"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintVertical_bias="0.628" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="164dp"
-        android:layout_height="54dp"
-        android:background="#F6F3F3"
+        android:layout_width="233dp"
+        android:layout_height="49dp"
+        android:background="#F8F4F4"
         android:text="Evaluation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CoolTour !"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="162dp"
-        android:layout_height="46dp"
-        android:background="#F6F4F4"
+        android:layout_width="222dp"
+        android:layout_height="55dp"
+        android:background="#FDF9F9"
+        android:capitalize="none"
         android:text="Reservation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.394" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="217dp"
+        android:layout_height="51dp"
+        android:background="#F8F5F5"
+        android:text="participation history walk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.861" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="216dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:background="#F4F0F0"
+        android:text="Approval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="407dp"
+        android:layout_height="249dp"
+        app:srcCompat="@drawable/img"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
