@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Contribution{
 
     private String title;
@@ -18,6 +20,47 @@ public class Contribution{
         this.sound_clips = sound_clips;
         this.walk_nodes = walk_nodes;
         this.contributor = contributor;
+    }
+
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getText() {
+        return this.introductory_text;
+    }
+
+    public ArrayList<File> getMultimedia() {
+        return this.photos;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public User getContributor() {
+        return this.contributor;
+    }
+
+    public void addSoundClip(File sound_clip) {
+        this.sound_clips.add(sound_clip);
+    }
+
+    public void addPoint(HistoricPoint historic_point) {
+        this.walk_nodes.add(historic_point);
+    }
+
+    public void deletePoint(HistoricPoint historic_point) {
+        
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setText(String text) {
+        this.introductory_text = text;
     }
 
 }
