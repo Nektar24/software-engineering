@@ -4,5 +4,7 @@ public class ContributionsList {
     
     private ArrayList<Contribution> contributions;
 
-    public HistoricWalksList() {}
+    public HistoricWalksList() {
+        
+    }
 }
