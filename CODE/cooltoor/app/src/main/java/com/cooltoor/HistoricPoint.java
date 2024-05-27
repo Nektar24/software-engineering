@@ -44,15 +44,34 @@ public class HistoricPoint {
 
         ArrayList<Report> reports = new ArrayList<Report>();
         for (Document doc : results) {
-            documentsList.add(doc);
+            reports.add(new Report(doc.get("report_user"), doc.get("report_reason"), doc.get("report_text")));
         }
+
+        return reports;
     }
 
     public User getContributor() {
         return this.contributor;
     }
 
+    public void deleteFromDatabase(){
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.deleteHistoricPoint(this);
+    }
+
+    public void deleteRepors(Report report){
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.deleteHistoricPointReports(this);
+    }
+
+    public void addMultimedia(ArrayList<File> multimedia){
+        for(File file : multimedia){
+            this.photos.add(file);
+        }
+    }
+
     public void storeInDatabase(){
-        //TODO : store in db
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeHistoricPoint(this);
     }
 }
