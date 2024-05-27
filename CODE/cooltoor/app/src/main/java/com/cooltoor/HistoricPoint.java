@@ -1,3 +1,7 @@
+import com.mongodb.client.FindIterable;
+import org.bson.Document;
+import java.util.ArrayList;
+
 public class HistoricPoint {
     private String title;
     private String introductory_text;
@@ -35,9 +39,13 @@ public class HistoricPoint {
 
     public ArrayList<Report> getReports(){
         DatabaseManager dbm = new DatabaseManager();
-        dbm.fetchHistoricPointReports(this);
+        FindIterable<Document> results = new FindIterable<Document>();
+        results = dbm.fetchHistoricPointReports(this);
 
-        
+        ArrayList<Report> reports = new ArrayList<Report>();
+        for (Document doc : results) {
+            documentsList.add(doc);
+        }
     }
 
     public User getContributor() {

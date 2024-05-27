@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-27T14:28:59.875Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="aKDYYN7bfLJd4Hf5Eov_" version="24.4.9" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-27T14:48:59.936Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="k9yYjuAeBIS_L2FFuVIt" version="24.4.9" type="device">
   <diagram name="Σελίδα-1" id="gyuGceL7KGT3zbH9doPQ">
-    <mxGraphModel dx="3050" dy="1799" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2875" dy="1699" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -565,84 +565,84 @@
           <mxGeometry y="142" width="185" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-886" value="DatabaseManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-1243" y="27" width="360" height="662" as="geometry">
+          <mxGeometry x="-1243" y="27" width="364" height="662" as="geometry">
             <mxRectangle x="340" y="380" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-887" value="-mongoClient:MongoClient" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="26" width="360" height="26" as="geometry" />
+          <mxGeometry y="26" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-888" value="-database:MongoDatabase" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="52" width="360" height="26" as="geometry" />
+          <mxGeometry y="52" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-889" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="78" width="360" height="8" as="geometry" />
+          <mxGeometry y="78" width="364" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-890" value="+fetchHistoricPoints():findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="86" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-890" value="+fetchHistoricPoints():FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="86" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-891" value="+storeHistoricPoint(HistoricPoint):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="112" width="360" height="26" as="geometry" />
+          <mxGeometry y="112" width="364" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-892" value="+fetchVisitingsHistory(User):findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="138" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-892" value="+fetchVisitingsHistory(User):FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="138" width="364" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-893" value="+fetchRating():findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="164" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-893" value="+fetchRating():FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="164" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-894" value="+storeRating(Rating):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="190" width="360" height="26" as="geometry" />
+          <mxGeometry y="190" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-895" value="+modifyRating(Rating):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="216" width="360" height="26" as="geometry" />
+          <mxGeometry y="216" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-896" value="+modifyVisitingsHistory(VisitingsHistory):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="242" width="360" height="26" as="geometry" />
+          <mxGeometry y="242" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-897" value="+fetchCitiesWithContributions():ArrayList&amp;lt;String&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="268" width="360" height="26" as="geometry" />
+          <mxGeometry y="268" width="364" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-898" value="+fetchContributions():findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="294" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-898" value="+fetchContributions():FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="294" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-899" value="+storeHistoricPoint(HistoricPoint):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="320" width="360" height="26" as="geometry" />
+          <mxGeometry y="320" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-900" value="+storeHistoricWalk(HistoricWalk):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="346" width="360" height="26" as="geometry" />
+          <mxGeometry y="346" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-901" value="+storeNotification(Notification):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="372" width="360" height="26" as="geometry" />
+          <mxGeometry y="372" width="364" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-902" value="+fetchTours():findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="398" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-902" value="+fetchTours():FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="398" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-903" value="+storeReservation(Reservation):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="424" width="360" height="26" as="geometry" />
+          <mxGeometry y="424" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-904" value="+updateTourAvailableSeats(int):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="450" width="360" height="26" as="geometry" />
+          <mxGeometry y="450" width="364" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-905" value="+fetchHistoricPointsWithReports():findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="476" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-905" value="+fetchHistoricPointsWithReports():FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="476" width="364" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-906" value="+fetchHistoricPointReports(HistoricPoint):findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="502" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-906" value="+fetchHistoricPointReports(HistoricPoint):FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="502" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-907" value="+deleteHistoricPointReports(HistoricPoint):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="528" width="360" height="26" as="geometry" />
+          <mxGeometry y="528" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-908" value="+deleteHistoricPoint(HistoricPoint):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="554" width="360" height="26" as="geometry" />
+          <mxGeometry y="554" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-910" value="+storeContribution(Contribution):void" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="580" width="360" height="30" as="geometry" />
+          <mxGeometry y="580" width="364" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-911" value="+fetchHistoricPointsInArea(Location):findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
-          <mxGeometry y="610" width="360" height="26" as="geometry" />
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-911" value="+fetchHistoricPointsInArea(Location):FindIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
+          <mxGeometry y="610" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="gYBZIZS-nICQd2uW-5tt-3" value="+storeReport(Report):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="MaDrp6No9p-H3l2GzSUb-886">
-          <mxGeometry y="636" width="360" height="26" as="geometry" />
+          <mxGeometry y="636" width="364" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-912" value="UserLocationManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-1544" y="108" width="188" height="52" as="geometry">
