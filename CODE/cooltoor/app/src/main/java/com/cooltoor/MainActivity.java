@@ -1,6 +1,7 @@
 package com.cooltoor;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,14 +25,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        /*
-        // insert in test collection
-        MongoClient mongoClient = DatabaseManager.getMongoClient();
-        MongoDatabase database = mongoClient.getDatabase("Cluster0");
-        database.getCollection("test").insertOne(new Document("name", "test"));
-        // console print connection message
-        System.out.println("Connected to the database");
-        */
+        DatabaseManager.storeHistoricPoint();
 
     }
 }

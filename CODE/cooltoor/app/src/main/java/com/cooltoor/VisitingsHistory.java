@@ -1,3 +1,4 @@
+/*
 package com.cooltoor;
 
 import java.util.ArrayList;
@@ -58,3 +59,4 @@ public class VisitingsHistory{
         //TODO : modify in db
     }
 }
+*/

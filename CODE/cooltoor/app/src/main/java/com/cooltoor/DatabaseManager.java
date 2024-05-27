@@ -1,4 +1,3 @@
-/*
 package com.cooltoor;
 
 import com.mongodb.client.MongoClient;
@@ -14,19 +13,18 @@ public class DatabaseManager {
     public static MongoClient getMongoClient() {
         return MongoClients.create(connectionString);
     }
-
+    /*
     public FindIterable<Document> fetchHistoricPoints() {
         return database.getCollection("HistoricPoints");
     }
-
-    public void storeHistoricPoint(HistoricPoint historic_point) {
+    */
+    public static void storeHistoricPoint() {
         MongoClient mongoClient = DatabaseManager.getMongoClient();
-        MongoDatabase database = mongoClient.getDatabase(this.dbName);
+        MongoDatabase database = mongoClient.getDatabase("Cluster0");
 
-        database.getCollection("HistoricPoints").insertOne(historic_point);
+        database.getCollection("test").insertOne(new Document("name", "test"));
 
         mongoClient.close();
     }
     
 }
-*/

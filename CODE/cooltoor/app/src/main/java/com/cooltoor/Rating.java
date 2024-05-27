@@ -1,3 +1,4 @@
+
 package com.cooltoor;
 
 public class Rating{
@@ -16,13 +17,13 @@ public class Rating{
     }
 
     public void storeInDatabase(){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeRating(this);
+        //DatabaseManager dbm = new DatabaseManager();
+        //dbm.storeRating(this);
     }
 
     public void modifyInDatabase(){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.modifyRating(this);
+        //DatabaseManager dbm = new DatabaseManager();
+        //dbm.modifyRating(this);
     }
 
     public void setStars(int stars){

@@ -16,7 +16,7 @@ public class Notification{
     }
 
     public void storeInDatabase(){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeNotification(this);
+        //DatabaseManager dbm = new DatabaseManager();
+        //dbm.storeNotification(this);
     }
 }

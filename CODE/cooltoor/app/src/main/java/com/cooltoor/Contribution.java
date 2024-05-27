@@ -8,18 +8,18 @@ public class Contribution{
     private String introductory_text;
     private String area;
     private String type;
-    private ArrayList<File> photos;
-    private ArrayList<File> sound_clips;
+    //private ArrayList<File> photos;
+    //private ArrayList<File> sound_clips;
     private ArrayList<HistoricPoint> walk_nodes;
     private User contributor;
 
-    public Contribution(String title, String introductory_text, String area, String type, ArrayList<File> photos, ArrayList<File> sound_clips, ArrayList<HistoricPoint> walk_nodes, User contributor) {
+    public Contribution(String title, String introductory_text, String area, String type/*,ArrayList<File> photos*//*, ArrayList<File> sound_clips*/, ArrayList<HistoricPoint> walk_nodes, User contributor) {
         this.title = title;
         this.introductory_text = introductory_text;
         this.area = area;
         this.type = type;
-        this.photos = photos;
-        this.sound_clips = sound_clips;
+        //this.photos = photos;
+        //this.sound_clips = sound_clips;
         this.walk_nodes = walk_nodes;
         this.contributor = contributor;
     }
@@ -32,11 +32,11 @@ public class Contribution{
     public String getText() {
         return this.introductory_text;
     }
-
+    /*
     public ArrayList<File> getMultimedia() {
         return this.photos;
     }
-
+    */
     public String getType() {
         return this.type;
     }
@@ -44,11 +44,11 @@ public class Contribution{
     public User getContributor() {
         return this.contributor;
     }
-
+    /*
     public void addSoundClip(File sound_clip) {
         this.sound_clips.add(sound_clip);
     }
-
+    */
     public void addPoint(HistoricPoint historic_point) {
         this.walk_nodes.add(historic_point);
     }
@@ -70,8 +70,8 @@ public class Contribution{
     }
 
     public void storeInDatabase() {
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeContribution(this);
+        //DatabaseManager dbm = new DatabaseManager();
+        //dbm.storeContribution(this);
     }
 
 }

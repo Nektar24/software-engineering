@@ -31,7 +31,7 @@ public class Report {
     }
 
     public void storeInDatabase() {
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeReport(this);
+        //DatabaseManager dbm = new DatabaseManager();
+        //dbm.storeReport(this);
     }
 }
