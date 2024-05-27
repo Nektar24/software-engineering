@@ -20,7 +20,7 @@ public class Location {
     }
 
     public ArrayList<Float> getLocation(){
-        ArrayList<Float> l = new ArrayList<Float>;
+        ArrayList<Float> l = new ArrayList<Float>();
         l.add(this.lat);
         l.add(this.lon);
         return l;
