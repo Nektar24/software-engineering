@@ -24,5 +24,17 @@ public class User{
         this.interests = interests;
     }
 
-    
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public long getPhoneNumber() {
+        return this.phone_number;
+    }
+
+
 }
