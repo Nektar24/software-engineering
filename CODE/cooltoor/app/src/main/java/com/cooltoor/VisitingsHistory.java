@@ -6,7 +6,7 @@ public class VisitingsHistory{
     private ArrayList<HistoricPoint> visited_historic_points;
 
 
-    public VisitingsHistory(User visitings_history_user,ArrayList<historic_point> visited_historic_points){
+    public VisitingsHistory(User visitings_history_user, ArrayList<HistoricPoint> visited_historic_points){
         this.visitings_history_user = visitings_history_user;
         this.visited_historic_points = visited_historic_points;
     }
