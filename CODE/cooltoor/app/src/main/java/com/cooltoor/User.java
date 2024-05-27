@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 import java.util.ArrayList;
 
 public class User{
@@ -12,8 +14,8 @@ public class User{
     private String birth_date;
     private ArrayList<String> interests;
 
-    public User(String fullname, String username, String password, String email, long phone_number, String address, String country, String birth_date, ArrayList<String> interests) {
-        this.full_name = fullname;
+    public User(String full_name, String username, String password, String email, long phone_number, String address, String country, String birth_date, ArrayList<String> interests) {
+        this.full_name = full_name;
         this.username = username;
         this.password = password;
         this.email = email;

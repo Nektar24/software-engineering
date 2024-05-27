@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 public class Rating{
 
     private User rating_user;

@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 public class Report {
     
     private User report_user;

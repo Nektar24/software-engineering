@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 public class Reservation{
 
     private Tour tour;
