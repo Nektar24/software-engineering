@@ -55,11 +55,19 @@ public class HistoricPoint {
     }
 
     public void deleteFromDatabase(){
-        
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.deleteHistoricPoint(this);
     }
 
     public void deleteRepors(Report report){
-        
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.deleteHistoricPointReports(this);
+    }
+
+    public void addMultimedia(ArrayList<File> multimedia){
+        for(File file : multimedia){
+            this.photos.add(file);
+        }
     }
 
     public void storeInDatabase(){
