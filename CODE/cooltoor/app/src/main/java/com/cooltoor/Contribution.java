@@ -52,7 +52,11 @@ public class Contribution{
     }
 
     public void deletePoint(HistoricPoint historic_point) {
-        
+        for (int i=0; i<this.walk_nodes.size(); i++) {
+            if(this.walk_nodes.get(i).equals(historic_point)) {
+                this.walk_nodes.remove(i);
+            }
+        }
     }
 
     public void setTitle(String title) {
