@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 import java.util.ArrayList;
 
 public class HistoricWalksList {

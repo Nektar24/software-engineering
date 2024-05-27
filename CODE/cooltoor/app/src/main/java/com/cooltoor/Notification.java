@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 public class Notification{
 
     private User notification_user;
