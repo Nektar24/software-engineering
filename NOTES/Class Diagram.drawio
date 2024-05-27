@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-27T13:45:19.523Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="_r2xF0CokUm1Ny_9WbQl" version="24.4.9" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-27T14:08:52.415Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="se1mgYX4-y0mS8PPEZUh" version="24.4.9" type="device">
   <diagram name="Σελίδα-1" id="gyuGceL7KGT3zbH9doPQ">
     <mxGraphModel dx="3050" dy="1799" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -565,7 +565,7 @@
           <mxGeometry y="142" width="185" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-886" value="DatabaseManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-1243" y="27" width="360" height="637" as="geometry">
+          <mxGeometry x="-1243" y="27" width="360" height="662" as="geometry">
             <mxRectangle x="340" y="380" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -640,6 +640,9 @@
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-911" value="+fetchHistoricPointsInArea(Location):findIterable&amp;lt;Document&amp;gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="MaDrp6No9p-H3l2GzSUb-886" vertex="1">
           <mxGeometry y="610" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="gYBZIZS-nICQd2uW-5tt-3" value="+storeReport(Report):void" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="MaDrp6No9p-H3l2GzSUb-886">
+          <mxGeometry y="636" width="360" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-912" value="UserLocationManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-1544" y="108" width="188" height="52" as="geometry">
