@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+//import com.mongodb.client.MongoClient;
+//import org.bson.Document;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +23,15 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        /*
+        // insert in test collection
+        MongoClient mongoClient = DatabaseManager.getMongoClient();
+        MongoDatabase database = mongoClient.getDatabase("Cluster0");
+        database.getCollection("test").insertOne(new Document("name", "test"));
+        // console print connection message
+        System.out.println("Connected to the database");
+        */
+
     }
 }
