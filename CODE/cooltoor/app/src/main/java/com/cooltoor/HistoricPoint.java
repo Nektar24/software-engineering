@@ -54,7 +54,16 @@ public class HistoricPoint {
         return this.contributor;
     }
 
+    public void deleteFromDatabase(){
+        
+    }
+
+    public void deleteRepors(Report report){
+        
+    }
+
     public void storeInDatabase(){
-        //TODO : store in db
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeHistoricPoint(this);
     }
 }
