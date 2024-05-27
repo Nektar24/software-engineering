@@ -1,3 +1,5 @@
+package com.cooltoor;
+
 import java.util.ArrayList;
 
 public class VisitingsHistory{
@@ -12,11 +14,40 @@ public class VisitingsHistory{
     }
 
     public VisitingsHistory(FindIterable<Document> visitings_history){
-        
+
+        ArrayList<String> interests = new ArrayList<String>();
+        for(String str : visitings_history.getList("interests", String.class)){
+            interests.add(str);
+        }
+
+        this.visitings_history_user = new User(visitings_history.get("user").getString("full_name"),
+                                               visitings_history.get("user").getString("username"),
+                                               visitings_history.get("user").getString("password"),
+                                               visitings_history.get("user").getString("email"),
+                                               visitings_history.get("user").getLong("phone_number"),
+                                               visitings_history.get("user").getString("adress"),
+                                               visitings_history.get("user").getString("country"),
+                                               visitings_history.get("user").getString("birth_date"),
+                                               interests);
+
+        ArrayList<HistoricPoint> historic_points = new ArrayList<HistoricPoint>;
+        for(Document point : visitings_history.getList("visited_historic_points", Document.class)){
+            historic_points.add(new HistoricPoint(point.getString("title"),
+                                                  point.getString("text"),
+                                                  point.getString("area"),
+
+                                                  new Location(point.getList("location", Float.class)),
+                                                  point.getString("date"),
+                                                  point.getString("time")));
+        } 
     }
 
-    public HistoricPoint getHistoricPoint(ArrayList<Float> l){
-        return this.visited_historic_points.get(location:l);
+    public HistoricPoint getHistoricPoint(Location location){
+        for(HistoricPoint point : this.visited_historic_points){
+            if(point.getLocation().equals(location)){
+                return point;
+            }
+        }
     }
 
     public void deleteHistoricPoint(ArrayList<Float> location){
