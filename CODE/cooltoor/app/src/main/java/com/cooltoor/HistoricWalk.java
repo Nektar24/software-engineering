@@ -20,7 +20,7 @@ public class HistoricWalk {
     }
 
     public void storeInDatabase(){
-
+        //TODO : store in db
     }
 
     public String getTitle() {
