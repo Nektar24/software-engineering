@@ -5,11 +5,11 @@ import com.mongodb.client.FindIterable;
 import org.bson.Document;
 
 public class DatabaseManager {
-    private String connectionString = "<YOUR_CONNECTION_STRING>";
-    private String dbName = "<YOUR_DB_NAME>";
+    private static final String connectionString = "mongodb+srv://webproject7:jsI7zni9lPb02XGY@cluster0.yqanhpf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+    private String dbName = "Cluster0";
 
-    public MongoClient getMongoClient() {
-        return MongoClients.create(this.connectionString);
+    public static MongoClient getMongoClient() {
+        return MongoClients.create(connectionString);
     }
 
     public FindIterable<Document> fetchHistoricPoints() {
@@ -17,7 +17,7 @@ public class DatabaseManager {
     }
 
     public void storeHistoricPoint(HistoricPoint historic_point) {
-        MongoClient mongoClient = this.getMongoClient();
+        MongoClient mongoClient = DatabaseManager.getMongoClient();
         MongoDatabase database = mongoClient.getDatabase(this.dbName);
 
         database.getCollection("HistoricPoints").insertOne(historic_point);
