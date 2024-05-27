@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-27T14:08:52.415Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="se1mgYX4-y0mS8PPEZUh" version="24.4.9" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-27T14:28:59.875Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="aKDYYN7bfLJd4Hf5Eov_" version="24.4.9" type="device">
   <diagram name="Σελίδα-1" id="gyuGceL7KGT3zbH9doPQ">
     <mxGraphModel dx="3050" dy="1799" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -423,7 +423,7 @@
         <mxCell id="MaDrp6No9p-H3l2GzSUb-841" value="-email:String" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="MaDrp6No9p-H3l2GzSUb-837" vertex="1">
           <mxGeometry y="104" width="219" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="MaDrp6No9p-H3l2GzSUb-842" value="-phone_number:long int" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="MaDrp6No9p-H3l2GzSUb-837" vertex="1">
+        <mxCell id="MaDrp6No9p-H3l2GzSUb-842" value="-phone_number:long" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="MaDrp6No9p-H3l2GzSUb-837" vertex="1">
           <mxGeometry y="130" width="219" height="26" as="geometry" />
         </mxCell>
         <mxCell id="MaDrp6No9p-H3l2GzSUb-843" value="-address:String" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="MaDrp6No9p-H3l2GzSUb-837" vertex="1">

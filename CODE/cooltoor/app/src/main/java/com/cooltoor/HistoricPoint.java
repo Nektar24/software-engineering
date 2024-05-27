@@ -34,8 +34,10 @@ public class HistoricPoint {
     }
 
     public ArrayList<Report> getReports(){
-        //TODO : speak to db and get reports
-        return null;
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.fetchHistoricPointReports(this);
+
+        
     }
 
     public User getContributor() {

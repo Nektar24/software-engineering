@@ -7,9 +7,12 @@ public class VisitingsHistory{
 
 
     public VisitingsHistory(User visitings_history_user,ArrayList<historic_point> visited_historic_points){
+        this.visitings_history_user = visitings_history_user;
+        this.visited_historic_points = visited_historic_points;
+    }
 
-            this.visitings_history_user = visitings_history_user;
-            this.visited_historic_points = visited_historic_points;
+    public VisitingsHistory(FindIterable<Document> visitings_history){
+        
     }
 
     public HistoricPoint getHistoricPoint(ArrayList<Float> l){
