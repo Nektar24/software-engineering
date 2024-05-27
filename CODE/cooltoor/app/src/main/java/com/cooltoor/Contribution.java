@@ -67,4 +67,9 @@ public class Contribution{
         this.introductory_text = text;
     }
 
+    public void storeInDatabase() {
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeContribution(this);
+    }
+
 }
