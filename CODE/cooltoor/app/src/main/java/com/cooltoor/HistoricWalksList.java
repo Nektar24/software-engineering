@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class HistoricWalksList {
     //A Wrapper class that creates Historic Walk instances and puts them in an arrayList
     private ArrayList<HistoricWalk> historic_walks;
