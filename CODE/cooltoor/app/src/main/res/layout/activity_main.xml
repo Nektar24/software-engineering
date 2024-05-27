@@ -12,8 +12,8 @@
         android:layout_width="230dp"
         android:layout_height="53dp"
         android:background="#FDF9F9"
-        android:textAllCaps="false"
         android:text="Reservation"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -25,8 +25,8 @@
         android:layout_width="228dp"
         android:layout_height="54dp"
         android:background="#F8F4F4"
-        android:textAllCaps="false"
         android:text="Evaluation"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -39,8 +39,8 @@
         android:layout_width="230dp"
         android:layout_height="58dp"
         android:background="#FAF8F8"
-        android:textAllCaps="false"
         android:text="Contribution History Point"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -53,8 +53,8 @@
         android:layout_width="231dp"
         android:layout_height="54dp"
         android:background="#FAF9F9"
-        android:textAllCaps="false"
         android:text="Contribution History walk"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -63,14 +63,13 @@
         app:layout_constraintVertical_bias="0.803" />
 
 
-
     <Button
         android:id="@+id/button5"
         android:layout_width="230dp"
         android:layout_height="52dp"
         android:background="#F8F5F5"
-        android:textAllCaps="false"
         android:text="participation history walk"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -83,8 +82,8 @@
         android:layout_width="232dp"
         android:layout_height="59dp"
         android:background="#F4F0F0"
-        android:textAllCaps="false"
         android:text="Approval"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -94,10 +93,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="624dp"
-        android:layout_height="461dp"
-        app:srcCompat="@drawable/img"
-        tools:layout_editor_absoluteX="-107dp"
-        tools:layout_editor_absoluteY="-144dp" />
+        android:layout_width="582dp"
+        android:layout_height="492dp"
+        android:layout_marginBottom="460dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

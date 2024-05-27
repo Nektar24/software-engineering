@@ -9,9 +9,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-//import com.mongodb.client.MongoClient;
-//import org.bson.Document;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        DatabaseManager.storeHistoricPoint();
+        DatabaseManager.getMongoClient();
 
     }
 }
