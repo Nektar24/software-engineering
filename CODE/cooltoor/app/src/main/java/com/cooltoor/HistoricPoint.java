@@ -44,8 +44,10 @@ public class HistoricPoint {
 
         ArrayList<Report> reports = new ArrayList<Report>();
         for (Document doc : results) {
-            documentsList.add(doc);
+            reports.add(new Report(doc.get("report_user"), doc.get("report_reason"), doc.get("report_text")));
         }
+
+        return reports;
     }
 
     public User getContributor() {
