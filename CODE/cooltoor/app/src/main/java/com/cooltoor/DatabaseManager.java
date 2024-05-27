@@ -10,8 +10,8 @@ public class DatabaseManager {
     private MongoDatabase database;
 
     public MongoDBManager(String connectionString, String dbName) {
-        mongoClient = MongoClients.create(connectionString);
-        database = mongoClient.getDatabase(dbName);
+        mongoClient = MongoClients.create(this.mongoClient);
+        database = mongoClient.getDatabase(this.database);
     }
 
 
