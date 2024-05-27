@@ -11,4 +11,24 @@ public class Report {
         this.report_reason = report_reason;
         this.report_text = report_text;
     }
+
+    public User getUser() {
+        return this.report_user;
+    }
+
+    public HistoricPoint getHistoricPoint() {
+        return this.reported_historic_point;
+    }
+
+    public String getReason() {
+        return this.report_reason;
+    }
+
+    public String getText() {
+        return this.report_text;
+    }
+
+    public void storeInDatabase() {
+        DatabaseManager
+    }
 }
