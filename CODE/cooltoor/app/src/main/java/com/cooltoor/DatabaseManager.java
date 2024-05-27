@@ -9,10 +9,18 @@ public class DatabaseManager {
     private MongoClient mongoClient;
     private MongoDatabase database;
 
-    public MongoDBManager(String connectionString, String dbName) {
-        mongoClient = MongoClients.create(connectionString);
-        database = mongoClient.getDatabase(dbName);
+    public MongoDBManager() {
+        mongoClient = MongoClients.create(this.mongoClient);
+        database = mongoClient.getDatabase(this.database);
     }
 
+    public FindIterable<Document> fetchHistoricPoints() {
+        return database.getCollection("HistoricPoints");
+    }
 
+    public void storeHistoricPoint(HistoricPoint historic_point) {
+        database.getCollection("HistoricPoints").insertOne(historic_point);
+    }
+
+    
 }
