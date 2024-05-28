@@ -1,3 +1,5 @@
+package com.cooltoor;
+/*
 import android.content.Context;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -45,3 +47,4 @@ public class DatabaseManager {
         }
     }
 }
+*/
