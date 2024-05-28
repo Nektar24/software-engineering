@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        DatabaseManager.getMongoClient();
+        //DatabaseManager.getMongoClient();
 
     }
 }

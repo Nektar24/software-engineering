@@ -28,8 +28,21 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("io.realm:realm-gradle-plugin:10.18.0")
+    }
+}
+
+apply(plugin = "realm-android")
+
 dependencies {
-    implementation("org.mongodb:mongodb-driver-sync:4.2.3")
+    implementation("io.realm:realm-gradle-plugin:10.18.0")
+    implementation("io.realm.mongodb:realm-mongodb-android:11.1.0");
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

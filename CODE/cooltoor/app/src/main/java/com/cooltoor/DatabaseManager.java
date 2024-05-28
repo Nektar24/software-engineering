@@ -1,37 +1,47 @@
-package com.cooltoor;
-
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.FindIterable;
-import org.bson.Document;
+import android.content.Context;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.mongodb.App;
+import io.realm.mongodb.AppConfiguration;
+import io.realm.mongodb.sync.SyncConfiguration;
 
 public class DatabaseManager {
-    private static final String connectionString = "mongodb+srv://webproject7:jsI7zni9lPb02XGY@cluster0.yqanhpf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-    private String dbName = "Cluster0";
 
-    public static MongoClient getMongoClient() {
-        System.out.println("aaaaaaaaaa11");
-        return MongoClients.create("mongodb+srv://webproject7:jsI7zni9lPb02XGY@cluster0.yqanhpf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    private static DatabaseManager instance;
+    private final Realm realm;
+
+    private DatabaseManager(Context context) {
+        Realm.init(context);
+        App app = new App(new AppConfiguration.Builder("your-realm-app-id").build());
+        SyncConfiguration config = new SyncConfiguration.Builder(app.currentUser(), "partition_key")
+                .allowQueriesOnUiThread(true)
+                .allowWritesOnUiThread(true)
+                .build();
+        Realm.setDefaultConfiguration(new RealmConfiguration.Builder()
+                .name("myrealm.realm")
+                .syncConfiguration(config)
+                .build());
+        realm = Realm.getDefaultInstance();
     }
 
-    /*
-    public FindIterable<Document> fetchHistoricPoints() {
-        return database.getCollection("HistoricPoints");
+    public static synchronized DatabaseManager getInstance(Context context) {
+        if (instance == null) {
+            instance = new DatabaseManager(context.getApplicationContext());
+        }
+        return instance;
     }
-    */
 
-    public static void test() {
-        try {
-            MongoClient mongoClient = DatabaseManager.getMongoClient();
-            MongoDatabase database = mongoClient.getDatabase("Cluster0");
+    public void addTask(Task task) {
+        realm.executeTransaction(realm -> realm.insertOrUpdate(task));
+    }
 
-            database.getCollection("test").insertOne(new Document("name", "test"));
+    public RealmResults<Task> getAllTasks() {
+        return realm.where(Task.class).findAllAsync();
+    }
 
-            mongoClient.close();
-        } catch (Exception e){
-            System.out.println("Something went wrong with DB");
+    public void closeRealm() {
+        if (realm != null) {
+            realm.close();
         }
     }
-    
 }
