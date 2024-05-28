@@ -1,7 +1,7 @@
-/*
 package com.cooltoor;
 
 import java.util.ArrayList;
+import org.bson.Document;
 
 public class VisitingsHistory{
     
@@ -31,7 +31,6 @@ public class VisitingsHistory{
                                                visitings_history.get("user").getString("birth_date"),
                                                interests);
 
-        ArrayList<HistoricPoint> historic_points = new ArrayList<HistoricPoint>;
         for(Document point : visitings_history.getList("visited_historic_points", Document.class)){
             historic_points.add(new HistoricPoint(point.getString("title"),
                                                   point.getString("text"),
@@ -41,6 +40,8 @@ public class VisitingsHistory{
                                                   point.getString("date"),
                                                   point.getString("time")));
         } 
+
+        this.visited_historic_points = new HistoricPointsList(visited_historic_points);;
     }
 
     public HistoricPoint getHistoricPoint(Location location){
@@ -59,4 +60,3 @@ public class VisitingsHistory{
         //TODO : modify in db
     }
 }
-*/
