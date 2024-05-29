@@ -16,15 +16,15 @@ public class Tour{
     private User tour_guide;
 
     public Tour(String title,String description,String language,ArrayList<HistoricPoint> tour_nodes,float duration,String date,int seats,int available_seats,User tour_guide){
-            this.title=title;
-            this.description=description;
-            this.language=language;
-            this.tour_nodes=tour_nodes;
-            this.duration=duration;
-            this.date=date;
-            this.seats=seats;
-            this.available_seats=available_seats;
-            this.tour_guide=tour_guide;
+        this.title=title;
+        this.description=description;
+        this.language=language;
+        this.tour_nodes=tour_nodes;
+        this.duration=duration;
+        this.date=date;
+        this.seats=seats;
+        this.available_seats=available_seats;
+        this.tour_guide=tour_guide;
     }
 
     
