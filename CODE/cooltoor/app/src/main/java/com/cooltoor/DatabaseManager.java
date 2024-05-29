@@ -1,49 +1,22 @@
 package com.cooltoor;
 
-import android.content.Context;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
-import io.realm.mongodb.App;
-import io.realm.mongodb.AppConfiguration;
-import io.realm.mongodb.sync.SyncConfiguration;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.FindIterable;
+import org.bson.Document;
+import java.util.ArrayList;
+import java.io.*;
 
-public class DatabaseManager {
+public class MongoDBManager {
+    private MongoClient mongoClient;
+    private MongoDatabase database;
 
-    private static DatabaseManager instance;
-    private final Realm realm;
-
-    private DatabaseManager(Context context) {
-        Realm.init(context);
-        App app = new App(new AppConfiguration.Builder("your-realm-app-id").build());
-        SyncConfiguration config = new SyncConfiguration.Builder(app.currentUser(), "partition_key")
-                .allowQueriesOnUiThread(true)
-                .allowWritesOnUiThread(true)
-                .build();
-        Realm.setDefaultConfiguration(new RealmConfiguration.Builder()
-                .name("myrealm.realm")
-                .syncConfiguration(config)
-                .build());
-        realm = Realm.getDefaultInstance();
+    public MongoDBManager(String connectionString, String dbName) {
+        this.mongoClient = MongoClients.create(connectionString);
+        this.database = mongoClient.getDatabase(dbName);
     }
 
-    public static synchronized DatabaseManager getInstance(Context context) {
-        if (instance == null) {
-            instance = new DatabaseManager(context.getApplicationContext());
-        }
-        return instance;
-    }
 
-    public void addTask(Task task) {
-        realm.executeTransaction(realm -> realm.insertOrUpdate(task));
-    }
-
-    public RealmResults<Task> getAllTasks() {
-        return realm.where(Task.class).findAllAsync();
-    }
-
-    public void closeRealm() {
-        if (realm != null) {
-            realm.close();
-        }
-    }
 }
