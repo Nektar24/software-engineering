@@ -43,11 +43,15 @@ public class Contribution{
     }
 
     public HistoricPoint convertToHistoricPoint(Admin admin) {
-        return new HistoricPoint(this.title, this.introductory_text, this.area, this.photos, this.location, this.contributor, admin);
+        HistoricPoint new_historic_point = new HistoricPoint(this.title, this.introductory_text, this.area, this.photos, this.location, this.contributor, admin);
+        this.deleteFromDatabase();
+        return new_historic_point;
     }
 
     public HistoricWalk convertToHistoricWalk(Admin admin) {
-        return new HistoricWalk(this.title, this.introductory_text, this.area, this.type, this.photos, this.sound_clips, this.walk_nodes, this.contributor);
+        HistoricWalk new_historic_walk = new HistoricWalk(this.title, this.introductory_text, this.area, this.walk_nodes, this.sound_clips, this.contributor, admin);
+        this.deleteFromDatabase();
+        return new_historic_walk;
     }
 
     public User getContributor() {

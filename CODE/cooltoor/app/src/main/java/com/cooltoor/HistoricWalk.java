@@ -23,7 +23,8 @@ public class HistoricWalk {
     }
 
     public void storeInDatabase(){
-        //TODO : store in db
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeHistoricWalk(this);
     }
 
     public String getTitle() {
