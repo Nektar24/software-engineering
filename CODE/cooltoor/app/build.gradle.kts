@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
 }
 
+repositories {
+    mavenCentral()
+}
+
 android {
     namespace = "com.cooltoor"
     compileSdk = 34
@@ -41,7 +45,7 @@ buildscript {
 apply(plugin = "realm-android")
 
 dependencies {
-    implementation("io.realm:realm-gradle-plugin:10.18.0")
+    implementation 'org.mongodb:mongodb-driver-sync:4.7.0'
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
