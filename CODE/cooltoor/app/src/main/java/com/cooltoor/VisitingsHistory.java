@@ -2,7 +2,6 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import org.bson.Document;
-<<<<<<< HEAD
 /*
 =======
 import java.io.*;

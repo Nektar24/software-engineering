@@ -1,5 +1,5 @@
 package com.cooltoor;
-
+/*
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
@@ -9,7 +9,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.io.*;
 
-public class MongoDBManager {
+public class DatabaseManager {
     private MongoClient mongoClient;
     private MongoDatabase database;
 
@@ -20,3 +20,4 @@ public class MongoDBManager {
 
 
 }
+*/

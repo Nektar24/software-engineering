@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-
+/*
 public class Contribution{
 
     private String title;
@@ -14,7 +14,7 @@ public class Contribution{
     private ArrayList<HistoricPoint> walk_nodes;
     private User contributor;
 
-    public Contribution(String title, String introductory_text, String area, String type/*,ArrayList<File> photos*//*, ArrayList<File> sound_clips*/, ArrayList<HistoricPoint> walk_nodes, User contributor) {
+    public Contribution(String title, String introductory_text, String area, String type,ArrayList<File> photos, ArrayList<File> sound_clips, ArrayList<HistoricPoint> walk_nodes, User contributor) {
         this.title = title;
         this.introductory_text = introductory_text;
         this.area = area;
@@ -76,3 +76,4 @@ public class Contribution{
     }
 
 }
+*/

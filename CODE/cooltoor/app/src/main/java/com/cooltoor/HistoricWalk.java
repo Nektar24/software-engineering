@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-
+/*
 public class HistoricWalk {
     private String title;
     private String introductory_text;
@@ -12,7 +12,7 @@ public class HistoricWalk {
     private User contributor;
     private User approved_by;
 
-    public HistoricWalk(String title, String introductory_text, String area, ArrayList<HistoricPoint> walk_nodes /*,ArrayList<File> sound_clips*/, User contributor, User approved_by) {
+    public HistoricWalk(String title, String introductory_text, String area, ArrayList<HistoricPoint> walk_nodes /*,ArrayList<File> sound_clips, User contributor, User approved_by) {
         this.title = title;
         this.introductory_text = introductory_text;
         this.area = area;
@@ -44,3 +44,4 @@ public class HistoricWalk {
 
 
 }
+*/

@@ -17,9 +17,10 @@ public class Notification{
         this.text=text;
         this.date=date;
     }
-
+    /*
     public void storeInDatabase(){
         DatabaseManager dbm = new DatabaseManager();
         dbm.storeNotification(this);
     }
+    */
 }

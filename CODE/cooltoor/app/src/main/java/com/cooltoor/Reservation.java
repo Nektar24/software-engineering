@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-
+/*
 public class Reservation{
 
     private Tour tour;
@@ -21,3 +21,4 @@ public class Reservation{
         dbm.storeNotification(this);
     }
 }
+*/

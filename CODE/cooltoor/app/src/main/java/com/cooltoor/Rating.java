@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-
+/*
 public class Rating{
 
     private User rating_user;
@@ -36,3 +36,4 @@ public class Rating{
         this.comment=comment;
     }
 }
+*/

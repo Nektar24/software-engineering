@@ -1,5 +1,5 @@
 package com.cooltoor;
-
+/*
 import com.mongodb.client.FindIterable;
 import org.bson.Document;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class HistoricPoint {
     private User contributor;
     private User approved_by;
 
-    public HistoricPoint(String title, String introductory_text, String area /*,ArrayList<File> photos*/, Location location, User contributor, User approved_by) {
+    public HistoricPoint(String title, String introductory_text, String area ,ArrayList<File> photos, Location location, User contributor, User approved_by) {
         this.title = title;
         this.introductory_text = introductory_text;
         this.area = area;
@@ -79,3 +79,4 @@ public class HistoricPoint {
     }
     
 }
+*/
