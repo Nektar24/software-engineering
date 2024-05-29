@@ -9,7 +9,11 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.io.*;
 
+<<<<<<< HEAD
 public class DatabaseManager {
+=======
+public class DatabaseManager{
+>>>>>>> 600860a57745c4d6f90f7b51a051819c31dc1170
     private MongoClient mongoClient;
     private MongoDatabase database;
 
