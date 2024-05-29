@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import org.bson.Document;
-
+/*
 public class VisitingsHistory{
     
     private User visitings_history_user;
@@ -60,3 +60,4 @@ public class VisitingsHistory{
         //TODO : modify in db
     }
 }
+*/
