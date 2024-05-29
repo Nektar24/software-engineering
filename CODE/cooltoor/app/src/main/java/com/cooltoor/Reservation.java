@@ -10,10 +10,9 @@ public class Reservation{
     private int seats;
 
     public Reservation(Tour tour,User reservation_user,int seats){
-
-            this.tour=tour;
-            this.reservation_user=reservation_user;
-            this.seats=seats;
+        this.tour = tour;
+        this.reservation_user = reservation_user;
+        this.seats = seats;
     }
 
     public void storeInDatabase(){
