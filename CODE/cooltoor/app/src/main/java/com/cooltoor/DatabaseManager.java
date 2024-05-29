@@ -9,7 +9,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.io.*;
 
-public class MongoDBManager {
+public class DatabaseManager{
     private MongoClient mongoClient;
     private MongoDatabase database;
 
