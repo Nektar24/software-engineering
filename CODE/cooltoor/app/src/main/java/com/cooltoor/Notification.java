@@ -1,5 +1,8 @@
 package com.cooltoor;
 
+import java.util.ArrayList;
+import java.io.*;
+
 public class Notification{
 
     private User notification_user;
@@ -16,7 +19,7 @@ public class Notification{
     }
 
     public void storeInDatabase(){
-        //DatabaseManager dbm = new DatabaseManager();
-        //dbm.storeNotification(this);
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeNotification(this);
     }
 }

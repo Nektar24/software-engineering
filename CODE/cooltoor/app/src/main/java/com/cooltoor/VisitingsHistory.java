@@ -2,7 +2,12 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import org.bson.Document;
+<<<<<<< HEAD
 /*
+=======
+import java.io.*;
+
+>>>>>>> 99672186b791488703b683c2f58c7dd2464f4182
 public class VisitingsHistory{
     
     private User visitings_history_user;

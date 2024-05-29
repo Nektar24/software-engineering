@@ -1,5 +1,8 @@
 package com.cooltoor;
 
+import java.util.ArrayList;
+import java.io.*;
+
 public class Reservation{
 
     private Tour tour;
@@ -14,7 +17,7 @@ public class Reservation{
     }
 
     public void storeInDatabase(){
-        //DatabaseManager dbm = new DatabaseManager();
-        //dbm.storeNotification(this);
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeNotification(this);
     }
 }
