@@ -38,9 +38,26 @@ public class DatabaseManager{
         return collection.find({username: user.getUsername()});
     }
 
-    public FindIterable<Document> fetchRating(){
-        MongoCollection<Document> collection = database.getCollection("User");
-        return collection.find({username: username});
+    public FindIterable<Document> fetchRating(User user, HistoricPoint historic_point){
+        
+    }
+
+    public void storeRating(Rating rating){
+        MongoCollection<Document> collection = database.getCollection("Rating");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String jsonString = mapper.writeValueAsString(rating);
+        Document document = Document.parse(jsonString);
+        collection.insertOne(document);
+    }
+
+    public void modifyRating(Rating rating){
+        MongoCollection<Document> collection = database.getCollection("Rating");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String jsonString = mapper.writeValueAsString(rating);
+        Document document = Document.parse(jsonString);
+        collection.updateOne({username: rating.getUsername(), historic_point: rating.getHistoricPoint()}, document);
     }
 
 }
