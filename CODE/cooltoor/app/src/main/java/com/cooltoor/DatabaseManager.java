@@ -25,12 +25,22 @@ public class DatabaseManager{
     }
 
     public void storeHistoricPoint(HistoricPoint historic_point){
-        MongoCollection<Document> collection = database.getCollection("historic_points");
+        MongoCollection<Document> collection = database.getCollection("HistoricPoint");
 
         ObjectMapper mapper = new ObjectMapper();
         String jsonString = mapper.writeValueAsString(historic_point);
         Document document = Document.parse(jsonString);
         collection.insertOne(document);
+    }
+
+    public FindIterable<Document> fetchVisitingsHistory(User user){
+        MongoCollection<Document> collection = database.getCollection("VisitingsHistory");
+        return collection.find({username: user.getUsername()});
+    }
+
+    public FindIterable<Document> fetchRating(){
+        MongoCollection<Document> collection = database.getCollection("User");
+        return collection.find({username: username});
     }
 
 }
