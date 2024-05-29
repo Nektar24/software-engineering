@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.io.*;
 
 public class Location {
-    private float lat ;
+    private float lat;
     private float lon;
+    String city;
     
     public Location(float lat,float lon){
 
@@ -14,7 +15,7 @@ public class Location {
     }
 
     public String getCity(){
-        return "123";
+        return this.city;
     }
 
     public void updateLocation(ArrayList<Float> location){

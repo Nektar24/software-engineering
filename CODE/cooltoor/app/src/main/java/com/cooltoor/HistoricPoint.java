@@ -12,9 +12,9 @@ public class HistoricPoint {
     private ArrayList<File> photos;
     private Location location;
     private User contributor;
-    private User approved_by;
+    private Admin approved_by;
 
-    public HistoricPoint(String title, String introductory_text, String area ,ArrayList<File> photos, Location location, User contributor, User approved_by) {
+    public HistoricPoint(String title, String introductory_text, String area ,ArrayList<File> photos, Location location, User contributor, Admin approved_by) {
         this.title = title;
         this.introductory_text = introductory_text;
         this.area = area;

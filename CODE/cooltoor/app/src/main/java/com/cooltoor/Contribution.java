@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-/*
+
 public class Contribution{
 
     private String title;
@@ -42,6 +42,18 @@ public class Contribution{
         return this.type;
     }
 
+    public HistoricPoint convertToHistoricPoint(Admin admin) {
+        HistoricPoint new_historic_point = new HistoricPoint(this.title, this.introductory_text, this.area, this.photos, this.location, this.contributor, admin);
+        this.deleteFromDatabase();
+        return new_historic_point;
+    }
+
+    public HistoricWalk convertToHistoricWalk(Admin admin) {
+        HistoricWalk new_historic_walk = new HistoricWalk(this.title, this.introductory_text, this.area, this.walk_nodes, this.sound_clips, this.contributor, admin);
+        this.deleteFromDatabase();
+        return new_historic_walk;
+    }
+
     public User getContributor() {
         return this.contributor;
     }
@@ -76,4 +88,3 @@ public class Contribution{
     }
 
 }
-*/
