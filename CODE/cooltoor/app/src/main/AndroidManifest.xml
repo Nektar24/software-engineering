@@ -20,7 +20,7 @@
         android:theme="@style/Theme.Cooltoor"
         tools:targetApi="31">
         <activity
-            android:name=".home_menu_page"
+            android:name=".TestActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
