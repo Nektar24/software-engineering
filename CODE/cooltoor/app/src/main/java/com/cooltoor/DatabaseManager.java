@@ -14,7 +14,7 @@ public class DatabaseManager{
     private MongoClient mongoClient;
     private MongoDatabase database;
 
-    public MongoDBManager(String connectionString, String dbName) {
+    public DatabaseManager(String connectionString, String dbName) {
         this.mongoClient = MongoClients.create(connectionString);
         this.database = mongoClient.getDatabase(dbName);
     }
