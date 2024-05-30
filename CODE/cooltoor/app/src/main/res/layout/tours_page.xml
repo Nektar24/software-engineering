@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editTextDate"
@@ -11,12 +12,13 @@
         android:layout_height="42dp"
         android:ems="10"
         android:inputType="date"
-        android:text="Date: 20/03/2024 - 25/032024"
+        android:text="Date: 20/03/2024 - 25/03/2024"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.127" />
 
     <TextView
         android:id="@+id/textView9"
@@ -26,7 +28,7 @@
         android:textColor="#000000"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -39,7 +41,7 @@
         android:layout_width="407dp"
         android:layout_height="34dp"
         android:text="City: Rome"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,5 +49,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.187" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="401dp"
+        android:layout_height="541dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView10"
+        app:layout_constraintVertical_bias="0.5">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000000"
+            android:text="Trevi, Pantheon and Hidden Gems Walking Tour\n Duration: 2h\n guide: anastasia" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000000"
+            android:text="colosseum sightseeing area \n duration: 1h and 30m \n guide: bruce" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000000"
+            android:text="exploring ancient rome \n duration: 2h \n guide: mary" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:textColor="#000000"
+            android:text="eating like an italian, gastronomic tour \n duration: 3h \n guide: federico" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
