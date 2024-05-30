@@ -8,6 +8,7 @@ public class Contribution{
     private String title;
     private String introductory_text;
     private String area;
+    private Location location;
     private String type;
     private ArrayList<File> photos;
     private ArrayList<File> sound_clips;
