@@ -21,7 +21,7 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trevi,Pantheon & Hidden Gems Walking Tour"
+        android:text="Trevi,Pantheon &amp; Hidden Gems Walking Tour"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
