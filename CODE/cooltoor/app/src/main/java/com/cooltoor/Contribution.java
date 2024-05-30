@@ -1,5 +1,5 @@
 package com.cooltoor;
-/*
+
 import java.util.ArrayList;
 import java.io.*;
 
@@ -44,13 +44,13 @@ public class Contribution{
 
     public HistoricPoint convertToHistoricPoint(Admin admin) {
         HistoricPoint new_historic_point = new HistoricPoint(this.title, this.introductory_text, this.area, this.photos, this.location, this.contributor, admin);
-        this.deleteFromDatabase();
+        //this.deleteFromDatabase();
         return new_historic_point;
     }
 
     public HistoricWalk convertToHistoricWalk(Admin admin) {
         HistoricWalk new_historic_walk = new HistoricWalk(this.title, this.introductory_text, this.area, this.walk_nodes, this.sound_clips, this.contributor, admin);
-        this.deleteFromDatabase();
+        //this.deleteFromDatabase();
         return new_historic_walk;
     }
 
@@ -83,9 +83,8 @@ public class Contribution{
     }
 
     public void storeInDatabase() {
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeContribution(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.storeContribution(this);*/
     }
 
 }
-*/

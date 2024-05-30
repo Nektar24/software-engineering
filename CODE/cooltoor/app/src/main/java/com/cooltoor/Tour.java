@@ -57,5 +57,8 @@ public class Tour{
 
     public void updateAvailableSeats(int seats){
         this.available_seats -= seats;
+
+        DatabaseManager dbm = new DatabaseManager();
+
     }
 }
