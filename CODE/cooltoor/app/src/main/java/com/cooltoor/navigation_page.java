@@ -7,11 +7,11 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class nagivation_page extends AppCompatActivity {
+public class navigation_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.home_menu_page); // TODO change to nagivation_page
+        setContentView(R.layout.home_menu_page); // TODO change to navigation_page
 
     }
 }
