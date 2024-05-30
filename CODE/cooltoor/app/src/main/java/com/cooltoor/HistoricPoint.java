@@ -1,6 +1,6 @@
 package com.cooltoor;
-/*
-import com.mongodb.client.FindIterable;
+
+/*import com.mongodb.client.FindIterable;*/
 import org.bson.Document;
 import java.util.ArrayList;
 import java.io.*;
@@ -40,7 +40,7 @@ public class HistoricPoint {
         return this.location;
     }
     
-    public ArrayList<Report> getReports(){
+    /*public ArrayList<Report> getReports(){
         DatabaseManager dbm = new DatabaseManager();
         FindIterable<Document> results = new FindIterable<Document>();
         results = dbm.fetchHistoricPointReports(this);
@@ -51,20 +51,20 @@ public class HistoricPoint {
         }
 
         return reports;
-    }
+    }*/
     
     public User getContributor() {
         return this.contributor;
     }
     
     public void deleteFromDatabase(){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.deleteHistoricPoint(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.deleteHistoricPoint(this);*/
     }
 
     public void deleteRepors(Report report){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.deleteHistoricPointReports(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.deleteHistoricPointReports(this);*/
     }
 
     public void addMultimedia(ArrayList<File> multimedia){
@@ -74,9 +74,8 @@ public class HistoricPoint {
     }
 
     public void storeInDatabase(){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeHistoricPoint(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.storeHistoricPoint(this);*/
     }
     
 }
-*/

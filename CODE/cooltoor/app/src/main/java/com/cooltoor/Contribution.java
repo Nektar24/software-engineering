@@ -1,5 +1,5 @@
 package com.cooltoor;
-/*
+
 import java.util.ArrayList;
 import java.io.*;
 
@@ -8,6 +8,7 @@ public class Contribution{
     private String title;
     private String introductory_text;
     private String area;
+    private Location location;
     private String type;
     private ArrayList<File> photos;
     private ArrayList<File> sound_clips;
@@ -44,13 +45,13 @@ public class Contribution{
 
     public HistoricPoint convertToHistoricPoint(Admin admin) {
         HistoricPoint new_historic_point = new HistoricPoint(this.title, this.introductory_text, this.area, this.photos, this.location, this.contributor, admin);
-        this.deleteFromDatabase();
+        //this.deleteFromDatabase();
         return new_historic_point;
     }
 
     public HistoricWalk convertToHistoricWalk(Admin admin) {
         HistoricWalk new_historic_walk = new HistoricWalk(this.title, this.introductory_text, this.area, this.walk_nodes, this.sound_clips, this.contributor, admin);
-        this.deleteFromDatabase();
+        //this.deleteFromDatabase();
         return new_historic_walk;
     }
 
@@ -67,13 +68,14 @@ public class Contribution{
     }
 
     public void deletePoint(HistoricPoint historic_point) {
-        for (int i=0; i<this.walk_nodes.size(); i++) {
-            if(this.walk_nodes.get(i).equals(historic_point)) {
+        for (int i = 0; i < this.walk_nodes.size(); i++) {
+            if (this.walk_nodes.get(i).equals(historic_point)) {
                 this.walk_nodes.remove(i);
+                break;
             }
         }
     }
-
+    
     public void setTitle(String title) {
         this.title = title;
     }
@@ -83,9 +85,8 @@ public class Contribution{
     }
 
     public void storeInDatabase() {
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeContribution(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.storeContribution(this);*/
     }
 
 }
-*/

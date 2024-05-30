@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-/*
+
 public class Tour{
 
     private String title;
@@ -57,6 +57,8 @@ public class Tour{
 
     public void updateAvailableSeats(int seats){
         this.available_seats -= seats;
+
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.updateTourAvailableSeats(this, seats);*/
     }
 }
-*/
