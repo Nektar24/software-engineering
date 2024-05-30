@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-/*
+
 public class Rating{
 
     private User rating_user;
@@ -18,13 +18,13 @@ public class Rating{
     }
 
     public void storeInDatabase(){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeRating(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.storeRating(this);*/
     }
 
-    public void modifyInDatabase(){
+    public void modifyInDatabase(int stars, String comment){
         DatabaseManager dbm = new DatabaseManager();
-        dbm.modifyRating(this);
+        dbm.modifyRating(this, stars, comment);
     }
 
     public void setStars(int stars){
@@ -35,4 +35,3 @@ public class Rating{
         this.comment = comment;
     }
 }
-*/
