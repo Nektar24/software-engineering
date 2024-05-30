@@ -23,8 +23,8 @@ public class Rating{
     }
 
     public void modifyInDatabase(int stars, String comment){
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.modifyRating(this, stars, comment);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.modifyRating(this, stars, comment);*/
     }
 
     public void setStars(int stars){
