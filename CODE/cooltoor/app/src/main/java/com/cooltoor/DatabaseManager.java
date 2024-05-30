@@ -39,7 +39,7 @@ public class DatabaseManager{
     }
 
     public FindIterable<Document> fetchRating(User user, HistoricPoint historic_point){
-        
+
     }
 
     public void storeRating(Rating rating){

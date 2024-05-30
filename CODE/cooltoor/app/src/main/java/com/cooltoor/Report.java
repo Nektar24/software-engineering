@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-/*
+
 public class Report {
     
     private User report_user;
@@ -34,8 +34,7 @@ public class Report {
     }
 
     public void storeInDatabase() {
-        DatabaseManager dbm = new DatabaseManager();
-        dbm.storeReport(this);
+        /*DatabaseManager dbm = new DatabaseManager();
+        dbm.storeReport(this);*/
     }
 }
-*/

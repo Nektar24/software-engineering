@@ -2,7 +2,7 @@ package com.cooltoor;
 
 import java.util.ArrayList;
 import java.io.*;
-/*
+
 public class Tour{
 
     private String title;
@@ -59,4 +59,3 @@ public class Tour{
         this.available_seats -= seats;
     }
 }
-*/
