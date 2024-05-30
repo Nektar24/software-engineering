@@ -13,25 +13,22 @@ import android.content.res.AssetManager;
 import android.location.Location;
 import androidx.core.app.ActivityCompat;
 import java.util.concurrent.Executor;
-import android.content.Content;
 
 public class UserLocationManager{
-
-    private void requestLocation() {
-        FusedLocationProviderClient fusedLocationClient;
-        if (ActivityCompat.checkSelfPermission(content, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+    private void requestLocation(Context context, FusedLocationProviderClient fusedLocationClient) {
+        if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
         fusedLocationClient.getLastLocation()
-                .addOnSuccessListener((Executor) this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        if (location != null) {
-                            double latitude = location.getLatitude();
-                            double longitude = location.getLongitude();
-                        }
+            .addOnSuccessListener((Executor) this, new OnSuccessListener<Location>() {
+                @Override
+                public void onSuccess(Location location) {
+                    if (location != null) {
+                        double latitude = location.getLatitude();
+                        double longitude = location.getLongitude();
                     }
-                });
+                }
+            });
     }
 
 }
