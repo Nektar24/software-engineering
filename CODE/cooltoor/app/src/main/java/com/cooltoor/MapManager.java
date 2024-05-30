@@ -8,8 +8,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class MapManager {
 
-    private static final String TAG = "MapManager";
-
     public static MapView requestMap(Context context) {
         MapView mapView = new MapView(context);
 
@@ -17,7 +15,7 @@ public class MapManager {
         try {
             MapsInitializer.initialize(context);
         } catch (Exception e) {
-            Log.e(TAG, "MapsInitializer failed: " + e.getMessage());
+            Log.e("MapManager", "MapsInitializer failed: " + e.getMessage());
         }
 
         mapView.onCreate(null);
