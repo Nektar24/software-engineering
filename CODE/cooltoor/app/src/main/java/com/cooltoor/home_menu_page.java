@@ -15,7 +15,7 @@ public class home_menu_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.contribution_info_page);
+        setContentView(R.layout.rating_modification_page);
         /*
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -23,7 +23,7 @@ public class home_menu_page extends AppCompatActivity {
             return insets;
         });
         */
-        
+
 
         //DatabaseManager.getMongoClient();
 

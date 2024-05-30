@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
+    <com.cooltoor.Map
         android:id="@+id/map_container"
         android:layout_width="399dp"
         android:layout_height="312dp"
@@ -53,7 +53,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961"></FrameLayout>
+        app:layout_constraintVertical_bias="0.961"></com.cooltoor.Map>
 
     <Button
         android:id="@+id/button16"
