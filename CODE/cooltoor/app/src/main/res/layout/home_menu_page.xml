@@ -23,7 +23,7 @@
         android:layout_width="230dp"
         android:layout_height="53dp"
         android:background="#FDF9F9"
-        android:text="Reservation"
+        android:text="Visit Historic Point"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -43,6 +43,7 @@ apply(plugin = "realm-android")
 dependencies {
     implementation("io.realm:realm-gradle-plugin:10.18.0")
     implementation("com.google.android.gms:play-services-maps:18.0.2")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
