@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class Map extends FrameLayout implements OnMapReadyCallback {
@@ -17,38 +16,32 @@ public class Map extends FrameLayout implements OnMapReadyCallback {
     private MapView mapView;
     private GoogleMap googleMap;
 
-    public Map(@NonNull Context context) {
+    public Map(@NonNull Context context, MapView mapView) {
         super(context);
+        this.mapView = mapView;
         initialize(context);
     }
 
     public Map(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        // If a default MapView if not provided explicitly
+        this.mapView = new MapView(context);
         initialize(context);
     }
 
     public Map(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        // If a default MapView if not provided explicitly
+        this.mapView = new MapView(context);
         initialize(context);
     }
 
     private void initialize(Context context) {
-        mapView = new MapView(context);
         addView(mapView);
-
-        // Initialize the MapView
-        try {
-            MapsInitializer.initialize(context);
-        } catch (Exception e) {
-            Log.e("Map", "MapsInitializer failed: " + e.getMessage());
-        }
-
-        mapView.onCreate(null);
-        mapView.onResume(); // Needed to get the map to display immediately
         mapView.getMapAsync(this);
     }
 
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         mapView.onCreate(savedInstanceState);
     }
 
@@ -75,7 +68,7 @@ public class Map extends FrameLayout implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         this.googleMap = googleMap;
-        // Additional setup for GoogleMap if needed
+        // Additional setup for GoogleMap
     }
 
     public GoogleMap getGoogleMap() {

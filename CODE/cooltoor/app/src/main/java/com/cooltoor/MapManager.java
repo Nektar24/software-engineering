@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class MapManager {
 
