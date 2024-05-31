@@ -16,8 +16,7 @@ public class historic_points_map_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.historic_points_map_page);
 
-        MapView mapView = MapManager.requestMap(this);  // Request MapView from MapManager
-        map = new Map(this, mapView);                   // Create Map instance with MapView
+        map = MapManager.requestMap(this);  // Request Map from MapManager
         FrameLayout mapContainer = findViewById(R.id.map_container);
         mapContainer.addView(map);                      // Add Map to the container in the layout
 

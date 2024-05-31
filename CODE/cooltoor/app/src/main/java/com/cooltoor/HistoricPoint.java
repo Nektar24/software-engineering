@@ -14,6 +14,9 @@ public class HistoricPoint {
     private User contributor;
     private Admin approved_by;
 
+    public HistoricPoint() {
+    }
+
     public HistoricPoint(String title, String introductory_text, String area ,ArrayList<File> photos, Location location, User contributor, Admin approved_by) {
         this.title = title;
         this.introductory_text = introductory_text;
@@ -77,5 +80,32 @@ public class HistoricPoint {
         /*DatabaseManager dbm = new DatabaseManager();
         dbm.storeHistoricPoint(this);*/
     }
-    
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setText(String text) {
+        this.introductory_text = text;
+    }
+
+    public void setMultimedia(ArrayList<File> multimedia) {
+        this.photos = multimedia;
+    }
+
+    public void setPointCoordinates(Location location){
+        this.location = location;
+    }
+
+    public void setContributor(User contributor) {
+        this.contributor = contributor;
+    }
+
+    public void setApprovedBy(Admin approved_by) {
+        this.approved_by = approved_by;
+    }
+
+
+    public void setArea(String area) {
+    }
 }

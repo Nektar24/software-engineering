@@ -5,8 +5,11 @@ import java.util.ArrayList;
 public class HistoricPointsList {
     private ArrayList<HistoricPoint> historic_points;
 
-    public HistoricPointsList(ArrayList<HistoricPoint> historic_points){
-        this.historic_points = historic_points;
+    public HistoricPointsList(String jsonString){
+        int I = 10;
+        for (int i = 0 ; i < I ; i++){
+            this.historic_points.add(new HistoricPoint());
+        }
     }
 
     public HistoricPoint getHistoricPoint(Location location){
@@ -27,5 +30,9 @@ public class HistoricPointsList {
             }
         }
         return filtered_points;
+    }
+
+    public int size() {
+        return this.historic_points.size();
     }
 }

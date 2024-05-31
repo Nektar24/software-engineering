@@ -1,5 +1,6 @@
 package com.cooltoor;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 public class home_menu_page extends AppCompatActivity {
 
     private UserLocationManager userlocationManager;
+    private Map map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,13 +41,33 @@ public class home_menu_page extends AppCompatActivity {
         });
     }
 
-    public void show(){
-
+    public void show(HistoricPointsList historic_points_in_the_area){
+        Intent intent;
+        if (historic_points_in_the_area.size() != 0){
+            intent=new Intent(this,error_page.class);
+        } else {
+            intent=new Intent(this,historic_points_map_page.class);
+            Bundle b = new Bundle();
+            intent.putExtras(b);
+        }
+        startActivity(intent);
     }
 
 
     public void visitHistoricPoint(){
-        requestUserLocation();
+        requestUserLocation(); // request location from UserLocationManager (is a function in page because it keeps requesting if location changes
+        map = MapManager.requestMap(this);  // Request Map from MapManager
+
+        // SEQUENCE 1 - ARROW 6 fetchHistoricPointsInArea()
+
+        // get from database manager
+        String jsonString = null;
+
+        // SEQUENCE 1 - ARROW 7 create new instance of HistoricPointsList called historic_points_in_the_area
+        HistoricPointsList historic_points_in_the_area = new HistoricPointsList(jsonString);
+
+        show(historic_points_in_the_area);
+
     }
 
     private void requestUserLocation() {
@@ -71,6 +93,30 @@ public class home_menu_page extends AppCompatActivity {
                 // Permission denied
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        map.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        map.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        map.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        map.onLowMemory();
     }
 
 
