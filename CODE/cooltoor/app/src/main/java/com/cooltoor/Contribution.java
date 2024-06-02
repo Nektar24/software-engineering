@@ -85,8 +85,8 @@ public class Contribution{
     }
 
     public void storeInDatabase() {
-        /*DatabaseManager dbm = new DatabaseManager();
-        dbm.storeContribution(this);*/
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeContribution(this);
     }
 
 }

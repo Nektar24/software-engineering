@@ -18,13 +18,13 @@ public class Rating{
     }
 
     public void storeInDatabase(){
-        /*DatabaseManager dbm = new DatabaseManager();
-        dbm.storeRating(this);*/
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.storeRating(this);
     }
 
     public void modifyInDatabase(int stars, String comment){
-        /*DatabaseManager dbm = new DatabaseManager();
-        dbm.modifyRating(this, stars, comment);*/
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.modifyRating(this, stars, comment);
     }
 
     public void setStars(int stars){

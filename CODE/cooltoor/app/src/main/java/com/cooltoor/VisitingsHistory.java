@@ -35,7 +35,7 @@ public class VisitingsHistory{
     }
 
     public void modifyInDatabase(){
-        /*DatabaseManager dbm = new DatabaseManager();
-        dbm.modifyVisitingsHistory(this);*/
+        DatabaseManager dbm = new DatabaseManager();
+        dbm.modifyVisitingsHistory(this);
     }
 }

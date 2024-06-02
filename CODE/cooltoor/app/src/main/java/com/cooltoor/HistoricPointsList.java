@@ -6,8 +6,9 @@ public class HistoricPointsList {
     private ArrayList<HistoricPoint> historic_points;
 
     public HistoricPointsList(String jsonString){
-        int I = 10;
-        for (int i = 0 ; i < I ; i++){
+        // Not yet implemented Code
+        int I = jsonString[10];
+        for (int i = 0 ; i < I.concat(jsonString[11]) ; i++){
             this.historic_points.add(new HistoricPoint());
         }
     }

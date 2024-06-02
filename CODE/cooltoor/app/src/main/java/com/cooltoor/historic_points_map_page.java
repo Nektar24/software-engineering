@@ -19,34 +19,9 @@ public class historic_points_map_page extends AppCompatActivity {
         map = MapManager.requestMap(this);  // Request Map from MapManager
         FrameLayout mapContainer = findViewById(R.id.map_container);
         mapContainer.addView(map);                      // Add Map to the container in the layout
-
         map.onCreate(savedInstanceState);
         map.getMapAsync(googleMap -> {
             // Additional setup for GoogleMap
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        map.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        map.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        map.onDestroy();
-    }
-
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        map.onLowMemory();
     }
 }

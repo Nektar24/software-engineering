@@ -17,12 +17,27 @@ public class Notification{
         this.date = date;
     }
     
-    /*
+    
     public void storeInDatabase(){
         DatabaseManager dbm = new DatabaseManager();
         dbm.storeNotification(this);
     }
-    */
+    
+    public void sendNotification(){
+        notification_user.receiveNotification(this);
+    }
+
+    public User getNotificationUser(){
+        return notification_user;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+
+    public String getText(){
+        return text;
+    }
 
     
 }
